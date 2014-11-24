@@ -29,9 +29,7 @@ var plugin = function (map) {
 
         if (!match) { return cb(null); }
 
-        start(match.cmd, { cwd: path.dirname(file.path) }, function (err) {
-            cb(err);
-        });
+        start(match.cmd, { cwd: path.dirname(file.path) }, cb);
     });
 };
 
