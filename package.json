@@ -1,6 +1,6 @@
 {
   "name": "gulp-start",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Start process based on filename",
   "main": "index.js",
   "scripts": {
