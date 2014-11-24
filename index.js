@@ -2,6 +2,7 @@
 
 var through = require('through2');
 var start = require('gulp-start-process');
+var path = require('path');
 
 function find(map, path) {
     for (var i = 0; i < map.length; i++) {
@@ -28,7 +29,7 @@ var plugin = function (map) {
 
         if (!match) { return cb(null); }
 
-        start(match.cmd, { cwd: file.cwd }, function (err) {
+        start(match.cmd, { cwd: path.dirname(file.path) }, function (err) {
             cb(err);
         });
     });
