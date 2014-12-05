@@ -10,8 +10,8 @@ Alternative for [gulp-install](https://github.com/slushjs/gulp-install) plugin.
 var gulp = require('gulp');
 var install = require('gulp-start');
 
-gulp.task('default', function (cb) {
-    gulp.src(['package.json', 'bower.json'])
+gulp.task('default', function () {
+    return gulp.src(['package.json', 'bower.json'])
         .pipe(install());
 });
 ```
